@@ -15,7 +15,7 @@ function displayButtonGenerator(){
 
 //creating buttons for newly entered tv shows
 function newButtonGenerator(){
-	$("#addGif").on("click", function(){
+	$("#addGif").on("click",function(){
 		var newShow = $("#gifCreator").val().trim();
 		if (newShow == ""){
 			return false;
@@ -32,7 +32,7 @@ function newButtonGenerator(){
 //producing gifs based on clicks
 $(document).ready(function(){
 
-$(".show-button").on("click", function(){
+$("body").on("click",".show-button", function(){
 	var activeBtn = $(this).attr("data-name");
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         activeBtn + "&api_key=1Dr8CbNbKbpHx2q89TTzD1YY6yh6FVRB&limit=10";
